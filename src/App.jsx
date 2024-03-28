@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       {showForm ? (
-        <div className="absolute flex flex-col justify-center items-center h-screen w-screen">
+        <div className="absolute flex flex-col justify-center items-center h-screen w-screen z-10">
           <form className="text-black-400 text-xl flex flex-col bg-gray-300 opacity-80 h-1/2 w-1/2 p-4 rounded-xl">
             <label htmlFor="bin_id">Add bin Id:</label>
             <input
