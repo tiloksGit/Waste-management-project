@@ -51,9 +51,12 @@ const App = () => {
         </div>
 
         <div className="flex">
-          <div className="flex flex-col m-3 items-center">
+          <div className="flex flex-col m-3 items-center justify-center">
             <div className="flex relative">
               <img src={dustbinImg} className="h-90" />
+              <p className="flex text-white font-bold items-center ml-[-2rem] mr-2">
+                {binOccupancy}%
+              </p>
               <div className="h-[12rem] w-5 mt-20 bg-yellow-400"></div>
               <span
                 className={`h-1 w-5 absolute bg-red-500 bottom-0 right-0 translate-y-[-1rem]`}
