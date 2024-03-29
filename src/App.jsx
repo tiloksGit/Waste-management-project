@@ -11,7 +11,7 @@ const App = () => {
     <>
       {showForm ? (
         <div className="absolute flex flex-col justify-center items-center h-screen w-screen z-10">
-          <form className="text-black-400 text-xl flex flex-col bg-yellow-300 opacity-90 h-1/2 w-3/4 p-4 rounded-xl">
+          <form className="text-black-400 text-xl flex flex-col bg-yellow-300 opacity-90 h-1/2 w-3/4 p-3 rounded-xl">
             <label htmlFor="bin_id">Add bin Id:</label>
             <input
               type="text"
@@ -61,7 +61,7 @@ const App = () => {
             </div>
           </form>
           <button
-            className="text-red-800 text-xl text-bold rounded-md bg-red-400 p-2 m-1"
+            className="text-red-800 text-md text-bold rounded-md bg-red-400 p-1 m-1"
             onClick={handleAdd}
           >
             Close
