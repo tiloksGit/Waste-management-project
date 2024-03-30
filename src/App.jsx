@@ -11,7 +11,7 @@ const App = () => {
     <>
       {showForm ? (
         <div className="absolute flex flex-col justify-center items-center h-screen w-screen z-10">
-          <form className="text-black-400 text-xl flex flex-col bg-yellow-300 opacity-90 h-1/2 w-3/4 p-3 rounded-xl">
+          <form className="text-black-400 text-xl flex flex-col bg-yellow-300 opacity-90 min-h-1/2 w-3/4 p-3 rounded-xl">
             <label htmlFor="bin_id">Add bin Id:</label>
             <input
               type="text"
