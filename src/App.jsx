@@ -72,7 +72,7 @@ const App = () => {
       )}
       <div className="flex flex-col  items-center bg-[url('/src/assets/LilaBg.jpg')] h-screen p-2">
         <div className="text-4xl text-green-400 text-center">
-          Lila's Waste management Project
+           Smart City Waste management Project
         </div>
         <div className="flex">
           <div className="flex flex-col m-3 items-center justify-center">
