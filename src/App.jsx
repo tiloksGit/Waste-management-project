@@ -54,7 +54,7 @@ const App = () => {
             <div className="w-100 text-center">
               <button
                 type="submit"
-                className="w-[5rem] text-center rounded-md bg-green-300 p-2 m-2"
+                className="w-[5rem] text-sm text-center rounded-md bg-green-300 p-2 m-2"
               >
                 Submit
               </button>
