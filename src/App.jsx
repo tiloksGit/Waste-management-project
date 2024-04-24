@@ -6,8 +6,8 @@ import MapsTest from "./Components/MapsTest";
 import { io } from "socket.io-client";
 import { Routes, Route } from "react-router-dom";
 import RemoveBin from "./Components/RemoveBin";
-// axios.defaults.baseURL = "http://13.232.54.245:8010/app";
-axios.defaults.baseURL = "http://localhost:8010/app";
+axios.defaults.baseURL = "http://13.232.54.245:8010/app";
+// axios.defaults.baseURL = "http://localhost:8010/app";
 
 const connectionOptions = {
   "force new connection": true,
@@ -15,7 +15,7 @@ const connectionOptions = {
   timeout: 10000,
   transports: ["websocket"],
 };
-const socket = io("http://localhost:8010", connectionOptions);
+const socket = io("http://13.232.54.245:8010", connectionOptions);
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
