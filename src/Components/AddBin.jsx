@@ -67,6 +67,16 @@ const AddBin = ({ handleAdd, loadBin, setLoadBin }) => {
           onChange={(e) => setLocation(e.target.value)}
           required
         />
+         <label htmlFor="lat">Latitude :</label>
+        <input
+          type="text"
+          id="lat"
+          placeholder="00.0000"
+          className="rounded-md p-2 bg-orange-200"
+          value={lat}
+          onChange={(e) => setLat(e.target.value)}
+          required
+        />
         <label htmlFor="lon">Longitude :</label>
         <input
           type="text"
@@ -77,16 +87,7 @@ const AddBin = ({ handleAdd, loadBin, setLoadBin }) => {
           onChange={(e) => setLon(e.target.value)}
           required
         />
-        <label htmlFor="lat">Latitude :</label>
-        <input
-          type="text"
-          id="lat"
-          placeholder="00.0000"
-          className="rounded-md p-2 bg-orange-200"
-          value={lat}
-          onChange={(e) => setLat(e.target.value)}
-          required
-        />
+       
         <label htmlFor="bin_id">Bin Manufacturer:</label>
         <input
           type="text"

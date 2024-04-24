@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import dustbinImg from "../assets/garbage-bin.svg";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const Bins = ({ loadBin }) => {
-  const [bins, setBins] = useState();
+const Bins = ({ loadBin, socket }) => {
+  const [bins, setBins] = useState([]);
   useEffect(() => {
     console.log("loading bin...");
     axios
@@ -16,7 +16,17 @@ const Bins = ({ loadBin }) => {
       })
       .finally(() => {});
   }, [loadBin]);
-
+  socket.on("fill", (data) => {
+    const updatedBins = bins.map((bin) => {
+      if (bin.bin_id === data.bin_id) {
+        // Return a new object with the updated fill value
+        return { ...bin, fill: data.fill };
+      }
+      // Return the original object if it's not the one being updated
+      return bin;
+    });
+    setBins(updatedBins);
+  });
   const handleMaps = () => {
     location.href =
       "https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393";
@@ -41,7 +51,7 @@ const Bins = ({ loadBin }) => {
                 <div className="h-[12rem] w-5 mt-20 bg-yellow-400 relative">
                   <span
                     className={`w-5 absolute bg-red-500 bottom-0 right-0`}
-                    style={{ height: `${bin.fill}%` }}
+                    style={{ height: `${bin.fill}%`, transition: "height 1s" }}
                   ></span>
                 </div>
               </div>
